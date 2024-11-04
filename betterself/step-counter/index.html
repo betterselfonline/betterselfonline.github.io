@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step Counter & Daily Goal Setter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Step Counter & Daily Goal Setter</h1>
+    </header>
+    <main>
+        <section id="step-counter">
+            <h2>Step Counter</h2>
+            <p id="step-count">0</p>
+            <button id="start-stop-button">Start</button>
+        </section>
+        <section id="daily-goal">
+            <h2>Daily Goal</h2>
+            <input id="daily-goal-input" type="number" value="10000">
+            <button id="set-daily-goal-button">Set Goal</button>
+        </section>
+        <section id="caloric-burn">
+            <h2>Caloric Burn</h2>
+            <p id="caloric-burn-count">0</p>
+        </section>
+        <section id="distance-tracked">
+            <h2>Distance Tracked</h2>
+            <p id="distance-tracked-count">0</p>
+        </section>
+        <section id="group-step-challenges">
+            <h2>Group Step Challenges</h2>
+            <button id="create-challenge-button">Create Challenge</button>
+            <ul id="challenge-list"></ul>
+        </section>
+        <section id="scenic-walk-recommendations">
+            <h2>Scenic Walk Recommendations</h2>
+            <button id="get-recommendations-button">Get Recommendations</button>
+            <ul id="recommendation-list"></ul>
+        </section>
+        <section id="goal-streaks">
+            <h2>Goal Streaks</h2>
+            <p id="streak-count">0</p>
+            <button id="view-rewards-button">View Rewards</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

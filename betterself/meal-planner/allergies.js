@@ -1,0 +1,21 @@
+const allergiesData = [
+    "Egg allergy",
+    "Milk allergy",
+    "Peanut allergy",
+    "Tree nut allergy",
+    "Soy allergy",
+    "Wheat allergy",
+    "Seafood allergy",
+    "Shellfish allergy",
+    "Sesame allergy",
+    "Mustard allergy",
+    "Sulphur dioxide allergy",
+    "Lupin allergy",
+    "Celery allergy",
+    "Mustard seed allergy",
+    "Sesame seed allergy",
+    "Fish allergy",
+    "Crustacean shellfish allergy",
+    "Mollusc shellfish allergy",
+    "Latex allergy"
+];

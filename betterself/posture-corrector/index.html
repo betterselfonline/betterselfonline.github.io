@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posture Corrector Reminder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Posture Corrector Reminder</h1>
+    </header>
+    <main>
+        <section id="reminders">
+            <h2>Regular Posture Reminders</h2>
+            <form id="reminder-form">
+                <label for="reminder-time">Reminder Time:</label>
+                <input type="time" id="reminder-time" value="08:00">
+                <label for="reminder-frequency">Reminder Frequency:</label>
+                <select id="reminder-frequency">
+                    <option value="15">Every 15 minutes</option>
+                    <option value="30">Every 30 minutes</option>
+                    <option value="60">Every 60 minutes</option>
+                </select>
+                <button id="save-reminder">Save</button>
+            </form>
+        </section>
+        <section id="guide">
+            <h2>Simple Posture Guide</h2>
+            <ul>
+                <li>Keep your head level</li>
+                <li>Shoulders back and relaxed</li>
+                <li>Chest open and shoulders down</li>
+                <li>Spine straight and hips aligned</li>
+            </ul>
+        </section>
+        <section id="exercises">
+            <h2>Guided Posture Exercises</h2>
+            <button id="start-exercise">Start Exercise</button>
+            <div id="exercise-instructions"></div>
+        </section>
+        <section id="progress">
+            <h2>Weekly Progress Tracker</h2>
+            <canvas id="progress-chart" width="200" height="200"></canvas>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

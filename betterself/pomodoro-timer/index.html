@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Focus Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Pomodoro Focus Timer</h1>
+        <nav>
+            <ul>
+                <li><a href="#timer">Timer</a></li>
+                <li><a href="#settings">Settings</a></li>
+                <li><a href="#analytics">Analytics</a></li>
+                <li><a href="#stretch-guide">Stretch Guide</a></li>
+                <li><a href="#group-focus">Group Focus</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="timer">
+            <h2>Pomodoro Timer</h2>
+            <div class="timer-container">
+                <div class="timer" id="timer-display">25:00</div>
+                <button id="start-button">Start</button>
+                <button id="reset-button">Reset</button>
+            </div>
+        </section>
+        <section id="settings">
+            <h2>Settings</h2>
+            <form id="settings-form">
+                <label for="work-time">Work Time:</label>
+                <input type="number" id="work-time" value="25">
+                <label for="break-time">Break Time:</label>
+                <input type="number" id="break-time" value="5">
+                <label for="stretch-reminder">Stretch Reminder:</label>
+                <input type="checkbox" id="stretch-reminder">
+                <button id="save-settings">Save</button>
+            </form>
+        </section>
+        <section id="analytics">
+            <h2>Focus and Productivity Analytics</h2>
+            <div id="analytics-container">
+                <p id="total-focused-time">Total Focused Time: 0 minutes</p>
+                <p id="total-break-time">Total Break Time: 0 minutes</p>
+                <p id="focus-streak">Focus Streak: 0 sessions</p>
+            </div>
+        </section>
+        <section id="stretch-guide">
+            <h2>Stretch Guide</h2>
+            <div id="stretch-guide-container">
+                <h3>Neck Stretch</h3>
+                <p>Slowly tilt your head to the side, bringing your ear towards your shoulder.</p>
+                <h3>Shoulder Rolls</h3>
+                <p>Roll your shoulders forward and backward in a circular motion.</p>
+            </div>
+        </section>
+        <section id="group-focus">
+            <h2>Group Focus Sessions</h2>
+            <div id="group-focus-container">
+                <button id="create-group-button">Create Group</button>
+                <button id="join-group-button">Join Group</button>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

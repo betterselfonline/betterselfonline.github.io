@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progressive Muscle Relaxation Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Progressive Muscle Relaxation Guide</h1>
+    </header>
+    <main>
+        <section id="guided-sessions">
+            <h2>Guided Sessions</h2>
+            <button id="start-session">Start Session</button>
+            <select id="session-length">
+                <option value="5">5 minutes</option>
+                <option value="10">10 minutes</option>
+                <option value="20">20 minutes</option>
+            </select>
+        </section>
+        <section id="mood-tracker">
+            <h2>Mood and Relaxation Impact Tracker</h2>
+            <label for="pre-session-mood">Pre-Session Mood:</label>
+            <select id="pre-session-mood">
+                <option value="1">Very Stressed</option>
+                <option value="2">Stressed</option>
+                <option value="3">Neutral</option>
+                <option value="4">Relaxed</option>
+                <option value="5">Very Relaxed</option>
+            </select>
+            <label for="post-session-mood">Post-Session Mood:</label>
+            <select id="post-session-mood">
+                <option value="1">Very Stressed</option>
+                <option value="2">Stressed</option>
+                <option value="3">Neutral</option>
+                <option value="4">Relaxed</option>
+                <option value="5">Very Relaxed</option>
+            </select>
+        </section>
+        <section id="background-sounds">
+            <h2>Customizable Background Sounds</h2>
+            <label for="background-sound">Background Sound:</label>
+            <select id="background-sound">
+                <option value="ocean-waves">Ocean Waves</option>
+                <option value="white-noise">White Noise</option>
+                <option value="nature-sounds">Nature Sounds</option>
+            </select>
+        </section>
+        <section id="routine-scheduler">
+            <h2>Routine Scheduler</h2>
+            <label for="schedule-frequency">Schedule Frequency:</label>
+            <select id="schedule-frequency">
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+            </select>
+            <label for="schedule-time">Schedule Time:</label>
+            <input type="time" id="schedule-time">
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

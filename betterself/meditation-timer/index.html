@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Meditation Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Daily Meditation Timer</h1>
+    </header>
+    <main>
+        <section id="timer-settings">
+            <h2>Timer Settings</h2>
+            <form id="timer-form">
+                <label for="timer-duration">Duration:</label>
+                <input type="number" id="timer-duration" value="5">
+                <label for="timer-interval">Interval:</label>
+                <input type="number" id="timer-interval" value="1">
+                <button id="start-timer">Start</button>
+            </form>
+        </section>
+        <section id="guided-meditations">
+            <h2>Guided Meditations</h2>
+            <ul id="guided-meditations-list">
+                <li><button class="guided-meditation" data-session="breathing">Breathing</button></li>
+                <li><button class="guided-meditation" data-session="body-scan">Body Scan</button></li>
+            </ul>
+        </section>
+        <section id="meditation-challenges">
+            <h2>Meditation Challenges</h2>
+            <ul id="meditation-challenges-list">
+                <li><button class="meditation-challenge" data-challenge="beginner">Beginner (5 minutes)</button></li>
+                <li><button class="meditation-challenge" data-challenge="advanced">Advanced (30 minutes)</button></li>
+            </ul>
+        </section>
+        <section id="background-sounds">
+            <h2>Background Sounds</h2>
+            <ul id="background-sounds-list">
+                <li><button class="background-sound" data-sound="rain">Rain</button></li>
+                <li><button class="background-sound" data-sound="forest">Forest</button></li>
+                <li><button class="background-sound" data-sound="white-noise">White Noise</button></li>
+            </ul>
+        </section>
+        <section id="progress-analytics">
+            <h2>Progress Analytics</h2>
+            <ul id="progress-analytics-list">
+                <li>Meditation Frequency: <span id="meditation-frequency">0</span></li>
+                <li>Total Time: <span id="total-time">0</span></li>
+                <li>Mood Impact: <span id="mood-impact">0</span></li>
+            </ul>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

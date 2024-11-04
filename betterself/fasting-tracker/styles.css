@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+section {
+    background-color: #f7f7f7;
+    padding: 1em;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-top: 0;
+}
+
+#fasting-hours,
+#eating-window,
+#progress-streaks {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#schedule-form {
+    margin-top: 20px;
+}
+
+#schedule-form input[type="radio"] {
+    margin-right: 10px;
+}
+
+#schedule-form input[type="time"] {
+    width: 100px;
+}
+
+#save-schedule {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#community-questions {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#community-questions li {
+    margin-bottom: 10px;
+}
+
+#ask-question {
+    margin-top: 20px;
+}
+
+#ask-question textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#submit-question {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#mood-energy-form {
+    margin-top: 20px;
+}
+
+#mood-energy-form input[type="radio"] {
+    margin-right: 10px;
+}
+
+#log-mood-energy {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

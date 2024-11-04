@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Gratitude Journal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Daily Gratitude Journal</h1>
+    </header>
+    <main>
+        <section id="prompts">
+            <h2>Daily Prompts</h2>
+            <ul id="prompt-list">
+                <!-- prompts will be generated dynamically -->
+            </ul>
+        </section>
+        <section id="entry-form">
+            <h2>Today's Entry</h2>
+            <form id="entry-form">
+                <label for="mood-before">How are you feeling today?</label>
+                <select id="mood-before" name="mood-before">
+                    <option value="happy">Happy</option>
+                    <option value="neutral">Neutral</option>
+                    <option value="sad">Sad</option>
+                </select>
+                <textarea id="entry-text" name="entry-text" placeholder="Write your gratitude entry..."></textarea>
+                <label for="photo">Add a photo (optional)</label>
+                <input type="file" id="photo" name="photo" accept="image/*">
+                <button id="submit-entry">Submit</button>
+            </form>
+        </section>
+        <section id="analytics">
+            <h2>Gratitude Reflection Analytics</h2>
+            <canvas id="mood-chart"></canvas>
+        </section>
+        <section id="share">
+            <h2>Share Your Gratitude</h2>
+            <button id="share-button">Share</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+
+</body>
+
+</html>

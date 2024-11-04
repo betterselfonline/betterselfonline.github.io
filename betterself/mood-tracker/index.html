@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Mood Tracker</h1>
+        <nav>
+            <ul>
+                <li><a href="#daily-mood">Daily Mood</a></li>
+                <li><a href="#patterns">Patterns</a></li>
+                <li><a href="#triggers">Triggers</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#insights">Insights</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="daily-mood">
+            <h2>Daily Mood</h2>
+            <form id="mood-form">
+                <label for="mood">How are you feeling today?</label>
+                <select id="mood" name="mood">
+                    <option value="😊">Happy</option>
+                    <option value="😐">Neutral</option>
+                    <option value="😔">Sad</option>
+                    <option value="😠">Angry</option>
+                    <option value="😳">Surprised</option>
+                </select>
+                <button id="submit-mood">Log Mood</button>
+            </form>
+            <div id="mood-log"></div>
+        </section>
+        <section id="patterns">
+            <h2>Patterns</h2>
+            <div id="pattern-graph"></div>
+        </section>
+        <section id="triggers">
+            <h2>Triggers</h2>
+            <form id="trigger-form">
+                <label for="trigger">What triggered your mood?</label>
+                <input id="trigger" name="trigger" type="text">
+                <button id="submit-trigger">Log Trigger</button>
+            </form>
+            <div id="trigger-log"></div>
+        </section>
+        <section id="resources">
+            <h2>Resources</h2>
+            <ul id="resource-list"></ul>
+        </section>
+        <section id="insights">
+            <h2>Insights</h2>
+            <div id="insight-graph"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

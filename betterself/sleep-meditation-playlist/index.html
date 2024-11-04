@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Meditation Playlist Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Sleep Meditation Playlist Generator</h1>
+    </header>
+    <main>
+        <section class="sleep-duration">
+            <h2>Sleep Duration</h2>
+            <input type="range" id="sleep-duration" min="30" max="120" value="60">
+            <label for="sleep-duration">30 minutes to 2 hours</label>
+        </section>
+        <section class="mood-selector">
+            <h2>Mood</h2>
+            <select id="mood">
+                <option value="relaxed">Relaxed</option>
+                <option value="calm">Calm</option>
+                <option value="focused">Focused</option>
+            </select>
+        </section>
+        <section class="sleep-sound-options">
+            <h2>Sleep Sound Options</h2>
+            <ul>
+                <li>
+                    <input type="checkbox" id="rain" checked>
+                    <label for="rain">Rain</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="ocean-waves" checked>
+                    <label for="ocean-waves">Ocean Waves</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="white-noise" checked>
+                    <label for="white-noise">White Noise</label>
+                </li>
+            </ul>
+        </section>
+        <section class="playlist-generator">
+            <h2>Generate Playlist</h2>
+            <button id="generate-playlist">Generate</button>
+        </section>
+        <section class="playlist">
+            <h2>Playlist</h2>
+            <ul id="playlist-list"></ul>
+        </section>
+        <section class="sleep-quality-feedback">
+            <h2>Sleep Quality Feedback</h2>
+            <select id="sleep-quality">
+                <option value="poor">Poor</option>
+                <option value="fair">Fair</option>
+                <option value="good">Good</option>
+                <option value="excellent">Excellent</option>
+            </select>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: #444;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+section {
+    background-color: #fff;
+    padding: 1em;
+    margin-bottom: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+#log-meal-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#log-meal-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#meal-note {
+    width: 100%;
+    padding: 0.5em;
+    font-size: 1em;
+    border: 1px solid #ccc;
+}
+
+#meal-photo {
+    margin-top: 1em;
+}
+
+#save-meal-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#save-meal-btn:hover {
+    background-color: #444;
+}
+
+#emotional-tags {
+    margin-top: 1em;
+}
+
+.tag-btn {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.tag-btn:hover {
+    background-color: #f9f9f9;
+}
+
+#analytics-section {
+    display: none;
+}
+
+#reminders-section {
+    display: none;
+}
+
+#reflection-prompts-section {
+    display: none;
+}

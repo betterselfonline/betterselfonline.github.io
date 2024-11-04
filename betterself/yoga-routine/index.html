@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Yoga Routine Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#routines">Routines</a></li>
+                <li><a href="#poses">Poses</a></li>
+                <li><a href="#community">Community</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="routines">
+            <h1>Guided Yoga Routines</h1>
+            <ul id="routine-list">
+                <!-- dynamically generated routine list -->
+            </ul>
+        </section>
+        <section id="poses">
+            <h1>Pose Breakdown</h1>
+            <ul id="pose-list">
+                <!-- dynamically generated pose list -->
+            </ul>
+        </section>
+        <section id="community">
+            <h1>Yoga Community</h1>
+            <ul id="community-list">
+                <!-- dynamically generated community list -->
+            </ul>
+        </section>
+        <section id="custom-routine">
+            <h1>Customize Your Routine</h1>
+            <form id="custom-routine-form">
+                <label for="routine-name">Routine Name:</label>
+                <input type="text" id="routine-name" name="routine-name">
+                <label for="pose-select">Select Poses:</label>
+                <select id="pose-select" multiple>
+                    <!-- dynamically generated pose options -->
+                </select>
+                <label for="duration">Duration:</label>
+                <input type="number" id="duration" name="duration">
+                <button id="create-routine-btn">Create Routine</button>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

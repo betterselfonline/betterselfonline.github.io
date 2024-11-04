@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermittent Fasting Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#schedules">Schedules</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="#mood-energy">Mood & Energy</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="dashboard">
+            <h1>Dashboard</h1>
+            <div id="fasting-hours"></div>
+            <div id="eating-window"></div>
+            <div id="progress-streaks"></div>
+        </section>
+        <section id="schedules">
+            <h1>Schedules</h1>
+            <form id="schedule-form">
+                <label>
+                    <input type="radio" name="schedule" value="16:8">
+                    16:8
+                </label>
+                <label>
+                    <input type="radio" name="schedule" value="5:2">
+                    5:2
+                </label>
+                <label>
+                    <input type="radio" name="schedule" value="omad">
+                    OMAD
+                </label>
+                <label>
+                    <input type="radio" name="schedule" value="custom">
+                    Custom
+                </label>
+                <input type="time" id="custom-start" placeholder="Start time">
+                <input type="time" id="custom-end" placeholder="End time">
+                <button id="save-schedule">Save</button>
+            </form>
+        </section>
+        <section id="community">
+            <h1>Community</h1>
+            <ul id="community-questions"></ul>
+            <form id="ask-question">
+                <textarea id="question" placeholder="Ask a question..."></textarea>
+                <button id="submit-question">Submit</button>
+            </form>
+        </section>
+        <section id="mood-energy">
+            <h1>Mood & Energy</h1>
+            <form id="mood-energy-form">
+                <label>
+                    <input type="radio" name="mood" value="good">
+                    Good
+                </label>
+                <label>
+                    <input type="radio" name="mood" value="bad">
+                    Bad
+                </label>
+                <label>
+                    <input type="radio" name="energy" value="high">
+                    High
+                </label>
+                <label>
+                    <input type="radio" name="energy" value="low">
+                    Low
+                </label>
+                <button id="log-mood-energy">Log</button>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

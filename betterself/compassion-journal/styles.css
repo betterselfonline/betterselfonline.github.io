@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+section {
+    background-color: #fff;
+    padding: 1em;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+#prompts-list,
+#reflection-list,
+#reminders-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#prompts-list li,
+#reflection-list li,
+#reminders-list li {
+    margin-bottom: 10px;
+}
+
+#new-prompt-btn,
+#new-reflection-btn,
+#new-reminder-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#new-prompt-btn:hover,
+#new-reflection-btn:hover,
+#new-reminder-btn:hover {
+    background-color: #444;
+}
+
+#visuals-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#visuals-container img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+#insights-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#insights-container h3 {
+    margin-top: 0;
+}

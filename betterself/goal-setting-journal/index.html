@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goal Setting Journal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Goal Setting Journal</h1>
+        <nav>
+            <ul>
+                <li><a href="#goals">Goals</a></li>
+                <li><a href="#prompts">Prompts</a></li>
+                <li><a href="#milestones">Milestones</a></li>
+                <li><a href="#visualization">Visualization</a></li>
+                <li><a href="#community">Community</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="goals">
+            <h2>SMART Goal Templates</h2>
+            <form id="goal-form">
+                <label for="goal-title">Goal Title:</label>
+                <input type="text" id="goal-title" required>
+                <label for="goal-description">Goal Description:</label>
+                <textarea id="goal-description" required></textarea>
+                <label for="goal-target-date">Target Date:</label>
+                <input type="date" id="goal-target-date" required>
+                <button id="create-goal-btn">Create Goal</button>
+            </form>
+            <ul id="goal-list"></ul>
+        </section>
+        <section id="prompts">
+            <h2>Daily/Weekly Goal Prompts</h2>
+            <ul id="prompt-list"></ul>
+        </section>
+        <section id="milestones">
+            <h2>Milestone Tracking</h2>
+            <ul id="milestone-list"></ul>
+        </section>
+        <section id="visualization">
+            <h2>Visualization Tools</h2>
+            <canvas id="progress-chart"></canvas>
+        </section>
+        <section id="community">
+            <h2>Community Goal Sharing</h2>
+            <button id="share-goal-btn">Share Goal</button>
+            <ul id="shared-goal-list"></ul>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

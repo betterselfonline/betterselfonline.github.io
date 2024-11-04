@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Mindfulness</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#sounds">Nature Sounds</a></li>
+                <li><a href="#meditations">Guided Meditations</a></li>
+                <li><a href="#views">Immersive Views</a></li>
+                <li><a href="#tracking">Mood Tracking</a></li>
+                <li><a href="#habits">Habit Builder</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="sounds">
+            <h2>Nature Sounds</h2>
+            <ul>
+                <li>
+                    <button class="play-sound" data-sound="forest">Forest</button>
+                    <audio src="sounds/forest.mp3" type="audio/mp3"></audio>
+                </li>
+                <li>
+                    <button class="play-sound" data-sound="ocean">Ocean</button>
+                    <audio src="sounds/ocean.mp3" type="audio/mp3"></audio>
+                </li>
+                <li>
+                    <button class="play-sound" data-sound="rain">Rain</button>
+                    <audio src="sounds/rain.mp3" type="audio/mp3"></audio>
+                </li>
+            </ul>
+        </section>
+        <section id="meditations">
+            <h2>Guided Meditations</h2>
+            <ul>
+                <li>
+                    <button class="play-meditation" data-meditation="relaxation">Relaxation</button>
+                    <audio src="meditations/relaxation.mp3" type="audio/mp3"></audio>
+                </li>
+                <li>
+                    <button class="play-meditation" data-meditation="focus">Focus</button>
+                    <audio src="meditations/focus.mp3" type="audio/mp3"></audio>
+                </li>
+            </ul>
+        </section>
+        <section id="views">
+            <h2>Immersive Views</h2>
+            <ul>
+                <li>
+                    <button class="play-view" data-view="forest-360">Forest 360</button>
+                    <video src="views/forest-360.mp4" type="video/mp4"></video>
+                </li>
+                <li>
+                    <button class="play-view" data-view="ocean-360">Ocean 360</button>
+                    <video src="views/ocean-360.mp4" type="video/mp4"></video>
+                </li>
+            </ul>
+        </section>
+        <section id="tracking">
+            <h2>Mood Tracking</h2>
+            <form>
+                <label for="mood">How do you feel?</label>
+                <select id="mood" name="mood">
+                    <option value="relaxed">Relaxed</option>
+                    <option value="stressed">Stressed</option>
+                    <option value="neutral">Neutral</option>
+                </select>
+                <button class="log-mood">Log Mood</button>
+            </form>
+            <ul class="mood-log">
+                <!-- logged moods will be displayed here -->
+            </ul>
+        </section>
+        <section id="habits">
+            <h2>Habit Builder</h2>
+            <form>
+                <label for="reminder-time">Set daily reminder time:</label>
+                <input type="time" id="reminder-time" name="reminder-time">
+                <button class="set-reminder">Set Reminder</button>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

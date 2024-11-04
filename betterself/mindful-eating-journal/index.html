@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindful Eating Journal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Mindful Eating Journal</h1>
+        <nav>
+            <button id="log-meal-btn">Log Meal</button>
+            <button id="view-analytics-btn">View Analytics</button>
+            <button id="view-reminders-btn">View Reminders</button>
+        </nav>
+    </header>
+    <main>
+        <section id="log-meal-section">
+            <h2>Log Meal</h2>
+            <form id="log-meal-form">
+                <input type="text" id="meal-note" placeholder="Short note about your meal">
+                <input type="file" id="meal-photo" accept="image/*">
+                <button id="save-meal-btn">Save Meal</button>
+            </form>
+            <div id="emotional-tags">
+                <h3>How are you feeling?</h3>
+                <button class="tag-btn" data-tag="stress">Stress</button>
+                <button class="tag-btn" data-tag="boredom">Boredom</button>
+                <button class="tag-btn" data-tag="celebration">Celebration</button>
+                <!-- Add more tags as needed -->
+            </div>
+        </section>
+        <section id="analytics-section">
+            <h2>Analytics</h2>
+            <div id="analytics-container">
+                <!-- Analytics will be rendered here -->
+            </div>
+        </section>
+        <section id="reminders-section">
+            <h2>Reminders</h2>
+            <div id="reminder-container">
+                <!-- Reminders will be rendered here -->
+            </div>
+        </section>
+        <section id="reflection-prompts-section">
+            <h2>Reflection Prompts</h2>
+            <div id="reflection-prompt-container">
+                <!-- Reflection prompts will be rendered here -->
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

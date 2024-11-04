@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+section {
+    background-color: #fff;
+    padding: 1em;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+#daily-prompt {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#complete-challenge {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#complete-challenge:hover {
+    background-color: #444;
+}
+
+#reflection-input {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#submit-reflection {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#submit-reflection:hover {
+    background-color: #444;
+}
+
+#video-tip {
+    width: 100%;
+    height: 240px;
+}
+
+#badge-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#badge-list li {
+    margin-bottom: 10px;
+}
+
+#badge-list li img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+#sharing-input {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#share-progress {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#share-progress:hover {
+    background-color: #444;
+}

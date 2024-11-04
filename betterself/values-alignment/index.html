@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Values Alignment Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Values Alignment Tracker</h1>
+        <nav>
+            <ul>
+                <li><a href="#core-values">Core Values Assessment</a></li>
+                <li><a href="#goal-tracking">Goal and Action Tracking</a></li>
+                <li><a href="#reflection-prompts">Weekly Reflection Prompts</a></li>
+                <li><a href="#values-analytics">Values-based Analytics</a></li>
+                <li><a href="#habit-recommendations">Habit Formation Recommendations</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="core-values">
+            <h2>Core Values Assessment</h2>
+            <ul id="values-list">
+                <!-- values list will be generated dynamically -->
+            </ul>
+            <button id="start-assessment">Start Assessment</button>
+        </section>
+        <section id="goal-tracking">
+            <h2>Goal and Action Tracking</h2>
+            <form id="goal-form">
+                <input type="text" id="goal-input" placeholder="Enter daily goal">
+                <select id="value-select">
+                    <!-- values list will be generated dynamically -->
+                </select>
+                <button id="add-goal">Add Goal</button>
+            </form>
+            <ul id="goal-list">
+                <!-- goal list will be generated dynamically -->
+            </ul>
+        </section>
+        <section id="reflection-prompts">
+            <h2>Weekly Reflection Prompts</h2>
+            <ul id="reflection-list">
+                <!-- reflection prompts will be generated dynamically -->
+            </ul>
+        </section>
+        <section id="values-analytics">
+            <h2>Values-based Analytics</h2>
+            <canvas id="values-chart"></canvas>
+        </section>
+        <section id="habit-recommendations">
+            <h2>Habit Formation Recommendations</h2>
+            <ul id="habit-list">
+                <!-- habit recommendations will be generated dynamically -->
+            </ul>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

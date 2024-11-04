@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Meal Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Personalized Meal Planner</h1>
+        <nav>
+            <ul>
+                <li><a href="#meal-planner">Meal Planner</a></li>
+                <li><a href="#grocery-list">Grocery List</a></li>
+                <li><a href="#recipe-import">Recipe Import</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="meal-planner">
+            <h2>Meal Planner</h2>
+            <form id="meal-planner-form">
+                <label for="dietary-preferences">Dietary Preferences:</label>
+                <select id="dietary-preferences" name="dietary-preferences">
+                    <option value="omnivore">Omnivore</option>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="vegan">Vegan</option>
+                    <option value="gluten-free">Gluten-free</option>
+                    <option value="low-carb">Low-carb</option>
+                </select>
+                <label for="allergies">Allergies:</label>
+                <select id="allergies" name="allergies" multiple></select>
+                <label for="goals">Goals:</label>
+                <select id="goals" name="goals">
+                    <option value="weight-loss">Weight Loss</option>
+                    <option value="muscle-gain">Muscle Gain</option>
+                    <option value="maintenance">Maintenance</option>
+                </select>
+                <label for="cooking-time">Cooking Time:</label>
+                <input type="number" id="cooking-time" name="cooking-time" placeholder="e.g. 30 mins">
+                <button id="generate-meal-plan">Generate Meal Plan</button>
+            </form>
+            <div id="meal-plan-results"></div>
+        </section>
+        <section id="grocery-list">
+            <h2>Grocery List</h2>
+            <ul id="grocery-list-items"></ul>
+        </section>
+        <section id="recipe-import">
+            <h2>Recipe Import</h2>
+            <form id="recipe-import-form">
+                <label for="recipe-url">Recipe URL:</label>
+                <input type="url" id="recipe-url" name="recipe-url" placeholder="e.g. https://example.com/recipe">
+                <button id="import-recipe">Import Recipe</button>
+            </form>
+            <div id="recipe-import-results"></div>
+        </section>
+    </main>
+    <script src="recipes.js"></script>
+    <script src="allergies.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Productivity Journal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Daily Productivity Journal</h1>
+    </header>
+    <main>
+        <section id="entry-form">
+            <h2>Today's Entry</h2>
+            <form>
+                <label for="accomplishments">Key Accomplishments:</label>
+                <textarea id="accomplishments" name="accomplishments"></textarea>
+                <label for="goals">Goals for Tomorrow:</label>
+                <textarea id="goals" name="goals"></textarea>
+                <label for="reflections">Reflections:</label>
+                <textarea id="reflections" name="reflections"></textarea>
+                <button id="submit-entry">Submit</button>
+            </form>
+        </section>
+        <section id="productivity-score">
+            <h2>Productivity Score</h2>
+            <p>Rate your productivity today:</p>
+            <input type="range" id="productivity-score-input" min="1" max="10" value="5">
+            <span id="productivity-score-display">5/10</span>
+        </section>
+        <section id="time-spent-tracking">
+            <h2>Time Spent Tracking</h2>
+            <p>Log time spent on tasks:</p>
+            <form>
+                <label for="task-name">Task Name:</label>
+                <input type="text" id="task-name" name="task-name">
+                <label for="time-spent">Time Spent:</label>
+                <input type="number" id="time-spent" name="time-spent">
+                <button id="log-time-spent">Log</button>
+            </form>
+        </section>
+        <section id="insights">
+            <h2>Weekly and Monthly Insights</h2>
+            <p>Review your productivity trends:</p>
+            <button id="view-insights">View Insights</button>
+        </section>
+        <section id="focus-zone-recommendations">
+            <h2>Focus Zone Recommendations</h2>
+            <p>Optimize your working hours:</p>
+            <button id="view-recommendations">View Recommendations</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

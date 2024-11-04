@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Body Scan Meditation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Daily Body Scan Meditation</h1>
+    </header>
+    <main>
+        <section id="meditation-options">
+            <h2>Guided Body Scan Meditations</h2>
+            <ul>
+                <li><button id="5-minute-meditation">5 minutes</button></li>
+                <li><button id="10-minute-meditation">10 minutes</button></li>
+                <li><button id="20-minute-meditation">20 minutes</button></li>
+            </ul>
+        </section>
+        <section id="voice-and-sound-options">
+            <h2>Customizable Voice and Sound Options</h2>
+            <ul>
+                <li>
+                    <label>
+                        <input type="radio" name="voice" value="male" checked>
+                        Male Voice
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="voice" value="female">
+                        Female Voice
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="sound" value="nature" checked>
+                        Nature Sounds
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="radio" name="sound" value="instrumental">
+                        Instrumental Music
+                    </label>
+                </li>
+            </ul>
+        </section>
+        <section id="physical-sensation-logging">
+            <h2>Physical Sensation Logging</h2>
+            <textarea id="physical-sensation-log"
+                placeholder="Log any discomfort or relaxation post-meditation"></textarea>
+            <button id="save-physical-sensation-log">Save</button>
+        </section>
+        <section id="daily-mood-correlation">
+            <h2>Daily Mood Correlation</h2>
+            <label>
+                <input type="radio" name="mood-before" value="good" checked>
+                Good
+            </label>
+            <label>
+                <input type="radio" name="mood-before" value="neutral">
+                Neutral
+            </label>
+            <label>
+                <input type="radio" name="mood-before" value="bad">
+                Bad
+            </label>
+            <button id="track-mood-before">Track Mood Before</button>
+            <label>
+                <input type="radio" name="mood-after" value="good" checked>
+                Good
+            </label>
+            <label>
+                <input type="radio" name="mood-after" value="neutral">
+                Neutral
+            </label>
+            <label>
+                <input type="radio" name="mood-after" value="bad">
+                Bad
+            </label>
+            <button id="track-mood-after">Track Mood After</button>
+        </section>
+        <section id="wellness-tracker-integration">
+            <h2>Integration with Wellness Tracker</h2>
+            <button id="sync-with-wellness-tracker">Sync with Wellness Tracker</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

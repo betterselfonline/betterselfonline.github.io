@@ -15,30 +15,36 @@ header h1 {
     margin: 0;
 }
 
-nav ul {
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+.navbar-nav {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    /* Change to column for mobile */
     align-items: center;
-    /* Center items vertically */
 }
 
-nav li {
+.navbar-nav li {
     margin-bottom: 10px;
-    /* Add margin for vertical spacing */
 }
 
-nav a {
+.navbar-nav a {
     color: #fff;
     text-decoration: none;
 }
 
-main {
-    flex: 1;
-    /* Make main section take up full available space */
+.navbar-nav a:hover {
+    color: #ccc;
+}
+
+.container {
     padding: 2em;
 }
 
@@ -47,43 +53,36 @@ section {
     padding: 1em;
     margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    /* Make sections full width */
 }
 
 h2 {
     margin-top: 0;
 }
 
-form {
-    flex-direction: column;
-    width: 100%;
+.form-group {
+    margin-bottom: 20px;
 }
 
 label {
     margin-bottom: 10px;
 }
 
-input,
-select {
-    width: 100%;
+.form-control {
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
 }
 
-button {
+.btn {
     background-color: #333;
     color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 100%;
-    /* Make button full width */
 }
 
-button:hover {
+.btn:hover {
     background-color: #444;
 }
 
@@ -91,11 +90,24 @@ button:hover {
 #grocery-list-items,
 #recipe-import-results {
     margin-top: 20px;
-    width: 100%;
-    /* Make results sections full width */
 }
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
-    /* Add more specific styles for mobile devices here */
+    .navbar {
+        padding: 0.5em;
+    }
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar-nav li {
+        margin-bottom: 10px;
+    }
+    .container {
+        padding: 1em;
+    }
+    section {
+        margin-bottom: 10px;
+    }
 }

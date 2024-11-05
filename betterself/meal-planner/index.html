@@ -5,60 +5,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personalized Meal Planner</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header>
-        <h1>Personalized Meal Planner</h1>
-        <nav>
-            <ul>
-                <li><a href="#meal-planner">Meal Planner</a></li>
-                <li><a href="#grocery-list">Grocery List</a></li>
-                <li><a href="#recipe-import">Recipe Import</a></li>
-            </ul>
+    <header class="container-fluid bg-light">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="display-4">Personalized Meal Planner</h1>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#meal-planner">Meal Planner <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#grocery-list">Grocery List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#recipe-import">Recipe Import</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
-    <main>
-        <section id="meal-planner">
-            <h2>Meal Planner</h2>
+    <main class="container">
+        <section id="meal-planner" class="mt-5">
+            <h2 class="mb-4">Meal Planner</h2>
             <form id="meal-planner-form">
-                <label for="dietary-preferences">Dietary Preferences:</label>
-                <select id="dietary-preferences" name="dietary-preferences">
-                    <option value="omnivore">Omnivore</option>
-                    <option value="vegetarian">Vegetarian</option>
-                    <option value="vegan">Vegan</option>
-                    <option value="gluten-free">Gluten-free</option>
-                    <option value="low-carb">Low-carb</option>
-                </select>
-                <label for="allergies">Allergies:</label>
-                <select id="allergies" name="allergies" multiple></select>
-                <label for="goals">Goals:</label>
-                <select id="goals" name="goals">
-                    <option value="weight-loss">Weight Loss</option>
-                    <option value="muscle-gain">Muscle Gain</option>
-                    <option value="maintenance">Maintenance</option>
-                </select>
-                <label for="cooking-time">Cooking Time:</label>
-                <input type="number" id="cooking-time" name="cooking-time" placeholder="e.g. 30 mins">
-                <button id="generate-meal-plan">Generate Meal Plan</button>
+                <div class="form-group">
+                    <label for="dietary-preferences">Dietary Preferences:</label>
+                    <select id="dietary-preferences" name="dietary-preferences" class="form-control">
+                        <option value="omnivore">Omnivore</option>
+                        <option value="vegetarian">Vegetarian</option>
+                        <option value="vegan">Vegan</option>
+                        <option value="gluten-free">Gluten-free</option>
+                        <option value="low-carb">Low-carb</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="allergies">Allergies:</label>
+                    <select id="allergies" name="allergies" multiple class="form-control"></select>
+                </div>
+                <div class="form-group">
+                    <label for="goals">Goals:</label>
+                    <select id="goals" name="goals" class="form-control">
+                        <option value="weight-loss">Weight Loss</option>
+                        <option value="muscle-gain">Muscle Gain</option>
+                        <option value="maintenance">Maintenance</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="cooking-time">Cooking Time:</label>
+                    <input type="number" id="cooking-time" name="cooking-time" placeholder="e.g. 30 mins" class="form-control">
+                </div>
+                <button id="generate-meal-plan" class="btn btn-primary">Generate Meal Plan</button>
             </form>
-            <div id="meal-plan-results"></div>
+            <div id="meal-plan-results" class="mt-4"></div>
         </section>
-        <section id="grocery-list">
-            <h2>Grocery List</h2>
-            <ul id="grocery-list-items"></ul>
+        <section id="grocery-list" class="mt-5">
+            <h2 class="mb-4">Grocery List</h2>
+            <ul id="grocery-list-items" class="list-group"></ul>
         </section>
-        <section id="recipe-import">
-            <h2>Recipe Import</h2>
+        <section id="recipe-import" class="mt-5">
+            <h2 class="mb-4">Recipe Import</h2>
             <form id="recipe-import-form">
-                <label for="recipe-url">Recipe URL:</label>
-                <input type="url" id="recipe-url" name="recipe-url" placeholder="e.g. https://example.com/recipe">
-                <button id="import-recipe">Import Recipe</button>
+                <div class="form-group">
+                    <label for="recipe-url">Recipe URL:</label>
+                    <input type="url" id="recipe-url" name="recipe-url" placeholder="e.g. https://example.com/recipe" class="form-control">
+                </div>
+                <button id="import-recipe" class="btn btn-primary">Import Recipe</button>
             </form>
-            <div id="recipe-import-results"></div>
+            <div id="recipe-import-results" class="mt-4"></div>
         </section>
     </main>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="recipes.js"></script>
     <script src="allergies.js"></script>
     <script src="script.js"></script>

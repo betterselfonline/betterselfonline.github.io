@@ -82,23 +82,41 @@ function loadSettings() {
     };
     db.onsuccess = (event) => {
         const db = event.target.result;
-        const settingsStore = db.transaction('settings', 'readwrite').objectStore('settings');
-        const request = settingsStore.get('settings');
-        request.onsuccess = (event) => {
-            const settings = event.target.result;
-            if (settings) {
-                const waterGoal = settings.waterGoal;
-                const activityLevel = settings.activityLevel;
-                const climate = settings.climate;
-                if (waterGoal && activityLevel && climate) {
-                    weightInput.value = waterGoal / WATER_GOAL_MULTIPLIER / ACTIVITY_LEVEL_MULTIPLIER[activityLevel] / CLIMATE_MULTIPLIER[climate];
-                    activityLevelSelect.value = activityLevel;
-                    climateSelect.value = climate;
-                    const settingsSection = document.getElementById('settings');
-                    settingsSection.classList.add('collapse');
+        if (db.objectStoreNames.contains('settings')) {
+            const settingsStore = db.transaction('settings', 'readonly').objectStore('settings');
+            const request = settingsStore.get('settings');
+            request.onsuccess = (event) => {
+                const settings = event.target.result;
+                if (settings) {
+                    const waterGoal = settings.waterGoal;
+                    const activityLevel = settings.activityLevel;
+                    const climate = settings.climate;
+                    if (waterGoal && activityLevel && climate) {
+                        weightInput.value = waterGoal / WATER_GOAL_MULTIPLIER / ACTIVITY_LEVEL_MULTIPLIER[activityLevel] / CLIMATE_MULTIPLIER[climate];
+                        activityLevelSelect.value = activityLevel;
+                        climateSelect.value = climate;
+                        const settingsSection = document.getElementById('settings');
+                        settingsSection.classList.add('collapse');
+                    }
+                } else {
+                    const addRequest = db.transaction('settings', 'readwrite').objectStore('settings').add({
+                        id: 'settings',
+                        waterGoal: 0,
+                        activityLevel: 'sedentary',
+                        climate: 'temperate'
+                    });
+                    addRequest.onsuccess = (event) => {
+                        console.log('Settings added successfully');
+                    };
                 }
-            } else {
-                const addRequest = settingsStore.add({
+            };
+        } else {
+            db.close();
+            db = indexedDB.open('hydration-reminder', 2);
+            db.onupgradeneeded = (event) => {
+                const db = event.target.result;
+                db.createObjectStore('settings', { keyPath: 'id' });
+                const addRequest = db.transaction('settings', 'readwrite').objectStore('settings').add({
                     id: 'settings',
                     waterGoal: 0,
                     activityLevel: 'sedentary',
@@ -106,10 +124,9 @@ function loadSettings() {
                 });
                 addRequest.onsuccess = (event) => {
                     console.log('Settings added successfully');
-                    loadSettings();
                 };
-            }
-        };
+            };
+        }
     };
 }
 

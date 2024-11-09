@@ -5,46 +5,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hydration Reminder</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header>
-        <h1>Hydration Reminder</h1>
+    <header class="bg-primary text-white p-3">
+        <h1 class="text-center">Hydration Reminder</h1>
     </header>
-    <main>
-        <section id="settings">
-            <h2>Personalized Water Goal Setting</h2>
-            <form id="settings-form">
-                <label for="weight">Weight (kg):</label>
-                <input type="number" id="weight" name="weight">
-                <label for="activity-level">Activity Level:</label>
-                <select id="activity-level" name="activity-level">
-                    <option value="sedentary">Sedentary</option>
-                    <option value="lightly-active">Lightly Active</option>
-                    <option value="moderately-active">Moderately Active</option>
-                    <option value="very-active">Very Active</option>
-                    <option value="extra-active">Extra Active</option>
-                </select>
-                <label for="climate">Climate:</label>
-                <select id="climate" name="climate">
-                    <option value="temperate">Temperate</option>
-                    <option value="hot">Hot</option>
-                    <option value="dry">Dry</option>
-                </select>
-                <button id="save-settings">Save Settings</button>
-            </form>
+    <main class="container mt-5">
+        <section id="settings" class="card mb-5">
+            <h2 class="card-header">Personalized Water Goal Setting</h2>
+            <div class="card-body">
+                <form id="settings-form">
+                    <div class="form-group">
+                        <label for="weight">Weight (kg):</label>
+                        <input type="number" id="weight" name="weight" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="activity-level">Activity Level:</label>
+                        <select id="activity-level" name="activity-level" class="form-control">
+                            <option value="sedentary">Sedentary</option>
+                            <option value="lightly-active">Lightly Active</option>
+                            <option value="moderately-active">Moderately Active</option>
+                            <option value="very-active">Very Active</option>
+                            <option value="extra-active">Extra Active</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="climate">Climate:</label>
+                        <select id="climate" name="climate" class="form-control">
+                            <option value="temperate">Temperate</option>
+                            <option value="hot">Hot</option>
+                            <option value="dry">Dry</option>
+                        </select>
+                    </div>
+                    <button id="save-settings" class="btn btn-primary">Save Settings</button>
+                </form>
+            </div>
         </section>
-        <section id="reminders">
-            <h2>Reminders</h2>
-            <ul id="reminder-list"></ul>
-            <button id="add-reminder">Add Reminder</button>
+        <section id="reminders" class="card mb-5">
+            <h2 class="card-header">Reminders</h2>
+            <div class="card-body">
+                <ul id="reminder-list" class="list-group"></ul>
+                <button id="add-reminder" class="btn btn-primary mt-3">Add Reminder</button>
+            </div>
         </section>
-        <section id="log">
-            <h2>Hydration Log</h2>
-            <ul id="log-list"></ul>
+        <section id="log" class="card">
+            <h2 class="card-header">Hydration Log</h2>
+            <div class="card-body">
+                <ul id="log-list" class="list-group"></ul>
+            </div>
         </section>
     </main>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
 

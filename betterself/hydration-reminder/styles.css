@@ -26,9 +26,19 @@ section.card {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1.card-header,
 h2.card-header {
     margin-top: 0;
+    cursor: pointer;
+}
+
+h2.card-header::after {
+    content: "\f107";
+    font-family: "FontAwesome";
+    margin-left: 10px;
+}
+
+h2.card-header.collapsed::after {
+    content: "\f105";
 }
 
 form {

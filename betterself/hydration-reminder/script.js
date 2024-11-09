@@ -76,9 +76,13 @@ function saveSettings() {
 
 function loadSettings() {
     const db = indexedDB.open('hydration-reminder', 1);
+    db.onupgradeneeded = (event) => {
+        const db = event.target.result;
+        db.createObjectStore('settings', { keyPath: 'id' });
+    };
     db.onsuccess = (event) => {
         const db = event.target.result;
-        const settingsStore = db.transaction('settings', 'readonly').objectStore('settings');
+        const settingsStore = db.transaction('settings', 'readwrite').objectStore('settings');
         const request = settingsStore.get('settings');
         request.onsuccess = (event) => {
             const settings = event.target.result;
@@ -93,6 +97,17 @@ function loadSettings() {
                     const settingsSection = document.getElementById('settings');
                     settingsSection.classList.add('collapse');
                 }
+            } else {
+                const addRequest = settingsStore.add({
+                    id: 'settings',
+                    waterGoal: 0,
+                    activityLevel: 'sedentary',
+                    climate: 'temperate'
+                });
+                addRequest.onsuccess = (event) => {
+                    console.log('Settings added successfully');
+                    loadSettings();
+                };
             }
         };
     };

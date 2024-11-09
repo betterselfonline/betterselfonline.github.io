@@ -75,13 +75,13 @@ function saveSettings() {
 }
 
 function loadSettings() {
-    const db = indexedDB.open('hydration-reminder', 1);
+    let db = indexedDB.open('hydration-reminder', 1);
     db.onupgradeneeded = (event) => {
         const db = event.target.result;
         db.createObjectStore('settings', { keyPath: 'id' });
     };
     db.onsuccess = (event) => {
-        const db = event.target.result;
+        db = event.target.result;
         if (db.objectStoreNames.contains('settings')) {
             const settingsStore = db.transaction('settings', 'readonly').objectStore('settings');
             const request = settingsStore.get('settings');
@@ -114,7 +114,7 @@ function loadSettings() {
             db.close();
             db = indexedDB.open('hydration-reminder', 2);
             db.onupgradeneeded = (event) => {
-                const db = event.target.result;
+                db = event.target.result;
                 db.createObjectStore('settings', { keyPath: 'id' });
                 const addRequest = db.transaction('settings', 'readwrite').objectStore('settings').add({
                     id: 'settings',

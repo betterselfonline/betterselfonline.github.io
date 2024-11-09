@@ -38,20 +38,44 @@ function saveSettings() {
     const activityLevel = activityLevelSelect.value;
     const climate = climateSelect.value;
     const waterGoal = calculateWaterGoal(weight, activityLevel, climate);
-    localStorage.setItem('waterGoal', waterGoal);
-    localStorage.setItem('activityLevel', activityLevel);
-    localStorage.setItem('climate', climate);
+    const db = indexedDB.open('hydration-reminder', 1);
+    db.onsuccess = (event) => {
+        const db = event.target.result;
+        const settingsStore = db.transaction('settings', 'readwrite').objectStore('settings');
+        const request = settingsStore.put({
+            id: 'settings',
+            waterGoal: waterGoal,
+            activityLevel: activityLevel,
+            climate: climate
+        });
+        request.onsuccess = (event) => {
+            console.log('Settings saved successfully');
+        };
+    };
 }
 
 function loadSettings() {
-    const waterGoal = localStorage.getItem('waterGoal');
-    const activityLevel = localStorage.getItem('activityLevel');
-    const climate = localStorage.getItem('climate');
-    if (waterGoal && activityLevel && climate) {
-        weightInput.value = waterGoal / WATER_GOAL_MULTIPLIER / ACTIVITY_LEVEL_MULTIPLIER[activityLevel] / CLIMATE_MULTIPLIER[climate];
-        activityLevelSelect.value = activityLevel;
-        climateSelect.value = climate;
-    }
+    const db = indexedDB.open('hydration-reminder', 1);
+    db.onsuccess = (event) => {
+        const db = event.target.result;
+        const settingsStore = db.transaction('settings', 'readonly').objectStore('settings');
+        const request = settingsStore.get('settings');
+        request.onsuccess = (event) => {
+            const settings = event.target.result;
+            if (settings) {
+                const waterGoal = settings.waterGoal;
+                const activityLevel = settings.activityLevel;
+                const climate = settings.climate;
+                if (waterGoal && activityLevel && climate) {
+                    weightInput.value = waterGoal / WATER_GOAL_MULTIPLIER / ACTIVITY_LEVEL_MULTIPLIER[activityLevel] / CLIMATE_MULTIPLIER[climate];
+                    activityLevelSelect.value = activityLevel;
+                    climateSelect.value = climate;
+                    const settingsSection = document.getElementById('settings');
+                    settingsSection.classList.add('collapse');
+                }
+            }
+        };
+    };
 }
 
 function addReminder() {

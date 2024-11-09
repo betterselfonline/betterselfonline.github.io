@@ -39,17 +39,37 @@ function saveSettings() {
     const climate = climateSelect.value;
     const waterGoal = calculateWaterGoal(weight, activityLevel, climate);
     const db = indexedDB.open('hydration-reminder', 1);
+    db.onupgradeneeded = (event) => {
+        const db = event.target.result;
+        db.createObjectStore('settings', { keyPath: 'id' });
+    };
     db.onsuccess = (event) => {
         const db = event.target.result;
         const settingsStore = db.transaction('settings', 'readwrite').objectStore('settings');
-        const request = settingsStore.put({
-            id: 'settings',
-            waterGoal: waterGoal,
-            activityLevel: activityLevel,
-            climate: climate
-        });
+        const request = settingsStore.get('settings');
         request.onsuccess = (event) => {
-            console.log('Settings saved successfully');
+            const settings = event.target.result;
+            if (settings) {
+                const updateRequest = settingsStore.put({
+                    id: 'settings',
+                    waterGoal: waterGoal,
+                    activityLevel: activityLevel,
+                    climate: climate
+                });
+                updateRequest.onsuccess = (event) => {
+                    console.log('Settings updated successfully');
+                };
+            } else {
+                const addRequest = settingsStore.add({
+                    id: 'settings',
+                    waterGoal: waterGoal,
+                    activityLevel: activityLevel,
+                    climate: climate
+                });
+                addRequest.onsuccess = (event) => {
+                    console.log('Settings added successfully');
+                };
+            }
         };
     };
 }

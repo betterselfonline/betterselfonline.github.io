@@ -15,35 +15,40 @@
     </header>
     <main class="container mt-5">
         <section id="settings" class="card mb-5">
-            <h2 class="card-header">Personalized Water Goal Setting</h2>
-            <div class="card-body">
-                <form id="settings-form">
-                    <div class="form-group">
-                        <label for="weight">Weight (kg):</label>
-                        <input type="number" id="weight" name="weight" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="activity-level">Activity Level:</label>
-                        <select id="activity-level" name="activity-level" class="form-control">
-                            <option value="sedentary">Sedentary</option>
-                            <option value="lightly-active">Lightly Active</option>
-                            <option value="moderately-active">Moderately Active</option>
-                            <option value="very-active">Very Active</option>
-                            <option value="extra-active">Extra Active</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="climate">Climate:</label>
-                        <select id="climate" name="climate" class="form-control">
-                            <option value="temperate">Temperate</option>
-                            <option value="hot">Hot</option>
-                            <option value="dry">Dry</option>
-                        </select>
-                    </div>
-                    <button id="save-settings" class="btn btn-primary">Save Settings</button>
-                </form>
+    <div class="card-header" data-toggle="collapse" data-target="#settings-collapse">
+        <h2>Personalized Water Goal Setting</h2>
+        <button class="btn btn-link float-right" type="button" data-toggle="collapse" data-target="#settings-collapse">
+            <i class="fas fa-angle-down"></i>
+        </button>
+    </div>
+    <div id="settings-collapse" class="collapse show card-body">
+        <form id="settings-form">
+            <div class="form-group">
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" name="weight" class="form-control">
             </div>
-        </section>
+            <div class="form-group">
+                <label for="activity-level">Activity Level:</label>
+                <select id="activity-level" name="activity-level" class="form-control">
+                    <option value="sedentary">Sedentary</option>
+                    <option value="lightly-active">Lightly Active</option>
+                    <option value="moderately-active">Moderately Active</option>
+                    <option value="very-active">Very Active</option>
+                    <option value="extra-active">Extra Active</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="climate">Climate:</label>
+                <select id="climate" name="climate" class="form-control">
+                    <option value="temperate">Temperate</option>
+                    <option value="hot">Hot</option>
+                    <option value="dry">Dry</option>
+                </select>
+            </div>
+            <button id="save-settings" class="btn btn-primary">Save Settings</button>
+        </form>
+    </div>
+</section>
         <section id="reminders" class="card mb-5">
             <h2 class="card-header">Reminders</h2>
             <div class="card-body">
